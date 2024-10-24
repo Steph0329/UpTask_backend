@@ -7,6 +7,10 @@ export const corsConfig : CorsOptions = {
         if(process.argv[2] === '--api') {
             whiteList.push(undefined)
         }
+
+        console.log('Origin:', origin);  // Agrega este log para ver el valor de 'origin'
+        console.log('WhiteList:', whiteList)
+        
         if(whiteList.includes(origin)) {
             callback(null, true)
         } else {
